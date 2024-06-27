@@ -46,9 +46,9 @@ function DemoDayVotePage() {
 
   return (
     <PageTemplate voteTitle="데모데이 투표">
-      <div className="grid grid-cols-3 gap-30pxr py-30pxr">
-        {temaData.map((element) => (
-          <TeamBtn key={element.id} team={element.team} description={element.description} />
+      <div className="grid grid-cols-6 gap-30pxr py-30pxr">
+        {temaData.map((element, index) => (
+          <TeamBtn key={element.id} index={index} team={element.team} description={element.description} />
         ))}
       </div>
       <div className="flex gap-10pxr pt-40pxr">

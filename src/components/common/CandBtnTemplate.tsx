@@ -6,13 +6,14 @@ interface CandBtnTemplateProps {
   clickVariant: true | false;
   children: React.ReactNode;
   onClick: () => void;
+  lastLineClass: string;
 }
 
-const CandBtnTemplate = ({ sizeVariant, clickVariant, children, onClick }: CandBtnTemplateProps) => {
+const CandBtnTemplate = ({ sizeVariant, clickVariant, children, onClick, lastLineClass }: CandBtnTemplateProps) => {
   return (
     <button
       onClick={onClick}
-      className={`${SizeVariants({ sizeVariant })} ${BackVariants({ clickVariant })} ${BorderVariants({ clickVariant })}`}
+      className={`col-span-2 ${SizeVariants({ sizeVariant })} ${BackVariants({ clickVariant })} ${BorderVariants({ clickVariant })} ${lastLineClass}`}
     >
       {children}
     </button>

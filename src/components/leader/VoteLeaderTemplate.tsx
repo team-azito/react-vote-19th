@@ -13,9 +13,9 @@ interface VoteLeaderTemplateProps {
 
 const VoteLeaderTemplate = ({ data }: VoteLeaderTemplateProps) => {
   return (
-    <div className="grid grid-cols-4 gap-30pxr py-30pxr">
-      {data.map((element) => (
-        <LeaderBtn key={element.id} team={element.team} name={element.name} username={element.username} />
+    <div className="grid grid-cols-8 gap-30pxr py-30pxr">
+      {data.map((element, index) => (
+        <LeaderBtn key={element.id} index={index} team={element.team} name={element.name} username={element.username} />
       ))}
     </div>
   );
